@@ -34,7 +34,6 @@ Interactive business intelligence dashboard analysing global market trends, stoc
 ---
 
 <br>
-<br>
 
 # INTERACTIVE DASHBOARD
 
