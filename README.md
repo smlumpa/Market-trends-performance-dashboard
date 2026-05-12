@@ -3,7 +3,7 @@
 Interactive business intelligence dashboard analysing global market trends, stock performance, commodity behaviour, and financial relationships using Power BI and data analytics.
 
 <p align="center">
-  <img src="images/laptop_mockup.png" width="850"/>
+  <img src="images/laptop_mockup.png" width="400"/>
 </p>
 
 <p align="center">
