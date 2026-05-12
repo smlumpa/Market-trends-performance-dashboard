@@ -223,8 +223,7 @@ market-trends-performance-dashboard/
 ### GitHub Repository
 https://github.com/smlumpa/market-trends-performance-dashboard
 
-### Live Power BI Dashboard
-📊 **Live Power BI Dashboard**  
+### Live Power BI Dashboard  
 📊 [View Interactive Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMzc0OGFiNmUtNmQ0OS00YWYxLTg4MzUtYWViNjFmYzkwMWQzIiwidCI6ImVlZDg0YTBlLWM3YTQtNDM1ZC05ZWQ1LTU4ODQwODgyYmMyOSJ9&pageName=d3fbaee262c4ba3b1b43)
 
 ---
