@@ -9,6 +9,9 @@ Interactive business intelligence dashboard analysing global market trends, stoc
 ![BigQuery](https://img.shields.io/badge/Google%20BigQuery-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 ![Analytics](https://img.shields.io/badge/Data%20Analytics-0E7490?style=for-the-badge)
 
+<br>
+<br>
+
 <p align="center">
   <img src="images/laptop_mockup.png" width="400"/>
 </p>
