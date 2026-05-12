@@ -31,7 +31,10 @@ Interactive business intelligence dashboard analysing global market trends, stoc
 
 [View Interactive Dashboard](PASTE_POWER_BI_LINK_HERE)
 
+---
 
+<br>
+<br>
 
 # INTERACTIVE DASHBOARD
 
