@@ -154,6 +154,7 @@ The project demonstrates the end-to-end business intelligence process from raw f
 
 # DATA PIPELINE
 
+Raw Financial Data → Python Cleaning & Initial Visualisation → BigQuery Processing → DAX Measures → Interactive Power BI Dashboard
 <p align="center">
   <img src="images/pipeline_diagram.svg" width="900"/>
 </p>
