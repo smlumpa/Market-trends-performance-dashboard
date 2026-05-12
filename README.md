@@ -1,6 +1,10 @@
 # Market Trends & Performance Dashboard
 
 Interactive business intelligence dashboard analysing global market trends, stock performance, commodity behaviour, and financial relationships using Power BI and data analytics.
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![BigQuery](https://img.shields.io/badge/Google%20BigQuery-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
+![Analytics](https://img.shields.io/badge/Data%20Analytics-0E7490?style=for-the-badge)
 
 <p align="center">
   <img src="images/laptop_mockup.png" width="400"/>
@@ -8,10 +12,7 @@ Interactive business intelligence dashboard analysing global market trends, stoc
 
 <p align="center">
 
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![BigQuery](https://img.shields.io/badge/Google%20BigQuery-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![Analytics](https://img.shields.io/badge/Data%20Analytics-0E7490?style=for-the-badge)
+
 
 </p>
 
