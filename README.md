@@ -224,11 +224,12 @@ market-trends-performance-dashboard/
 https://github.com/smlumpa/market-trends-performance-dashboard
 
 ### Live Power BI Dashboard
-PASTE_POWER_BI_LINK_HERE
+📊 **Live Power BI Dashboard**  
+[View Interactive Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYzZjZjExYjAtYzRlYS00NTFhLWFlYmMtYzQwN2QyNTU4NDNjIiwidCI6IjQ1Mzc4OWE0LWM3YjEtNGMzYy04MWUxLWNiNGZmZWZhNDRjMCJ9)
 
 ---
 
 # AUTHOR
 
-Sophia Lumpa  
-Business
+**Sophia Lumpa**  
+Business Intelligence & Operations Analyst
