@@ -1,235 +1,97 @@
 # Market Trends & Performance Dashboard
 
-Interactive business intelligence dashboard analysing global market trends, stock performance, commodity behaviour, and financial relationships using Power BI and data analytics.
-<br>
-<br>
+An end-to-end portfolio project examining historical stock-market indices and commodity prices. The project combines Python data preparation and analysis with an interactive Power BI report.
 
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![BigQuery](https://img.shields.io/badge/Google%20BigQuery-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![Analytics](https://img.shields.io/badge/Data%20Analytics-0E7490?style=for-the-badge)
+![Dashboard preview](images/dashboard_screenshot.png)
 
-<br>
-<br>
+## Live dashboard
 
-<p align="center">
-  <img src="images/laptop_mockup.png" width="400"/>
-</p>
+[Open the interactive Power BI dashboard](https://app.powerbi.com/view?r=eyJrIjoiMzc0OGFiNmUtNmQ0OS00YWYxLTg4MzUtYWViNjFmYzkwMWQzIiwidCI6ImVlZDg0YTBlLWM3YTQtNDM1ZC05ZWQ1LTU4ODQwODgyYmMyOSJ9&pageName=d3fbaee262c4ba3b1b43)
 
-<p align="center">
+## Business questions
 
+- How did major global stock indices perform over the period analysed?
+- Which markets and commodities produced the highest annualised returns?
+- Which assets showed the greatest volatility?
+- How strongly were stock-market and commodity returns correlated?
+- How can an interactive dashboard make cross-market comparison easier?
 
+## Tools and techniques
 
-</p>
+- Python: pandas, NumPy, Matplotlib and Seaborn
+- Power BI and data modelling
+- Data cleaning, reshaping and joining
+- Daily and annualised return calculations
+- Annualised volatility and correlation analysis
+- Interactive dashboard design
+- Google BigQuery in the original project workflow
 
-<br>
-<br>
-
----
-
-## Live Dashboard
-
-[View Interactive Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMzc0OGFiNmUtNmQ0OS00YWYxLTg4MzUtYWViNjFmYzkwMWQzIiwidCI6ImVlZDg0YTBlLWM3YTQtNDM1ZC05ZWQ1LTU4ODQwODgyYmMyOSJ9&pageName=d3fbaee262c4ba3b1b43)
-
----
-
-<br>
-
-# INTERACTIVE DASHBOARD
-
-Explore the dashboard to analyse market trends, asset performance, and relationships across global financial markets and commodities.
-
-The dashboard includes a live interactive experience, enabling users to:
-- compare stock market performance,
-- analyse commodity trends,
-- identify volatility patterns,
-- explore cross-market relationships in real time.
-
----
-
-# OVERVIEW
-
-This project explores the relationship between global stock markets and commodities using interactive data visualisation and financial analytics.
-
-The dashboard enables users to:
-- identify performance trends,
-- compare market behaviour,
-- analyse volatility,
-- explore correlations between assets,
-- understand how commodities and global markets respond to economic conditions and uncertainty.
-
-The project combines data analysis, financial reporting, and interactive business intelligence into a single analytical solution.
-
----
-
-# DASHBOARD PREVIEW
-
-<p align="center">
-  <img src="images/dashboard_screenshot.png" width="1000"/>
-</p>
-
----
-
-# THE PROBLEM
-
-Financial market data is highly complex and often fragmented across multiple sources.
-
-Without clear visualisation and analytical reporting:
-- identifying trends becomes time-consuming,
-- comparing asset behaviour is difficult,
-- volatility patterns are harder to interpret,
-- market correlations require extensive manual analysis.
-
-Businesses, analysts, and investors need accessible ways to interpret financial data quickly and effectively.
-
----
-
-# THE SOLUTION
-
-Developed an interactive Power BI dashboard integrating stock market and commodity data into a single analytical environment.
-
-The dashboard allows users to:
-- dynamically explore market performance,
-- compare asset trends,
-- identify correlations,
-- analyse volatility,
-- monitor financial behaviour across regions and asset classes.
-
-The solution transforms raw financial data into actionable market insights through interactive visualisation.
-
----
-
-# KEY FEATURES
-
-- Interactive Power BI dashboard
-- Cross-market performance tracking
-- Commodity and stock market comparison
-- Correlation and volatility analysis
-- Interactive filtering by:
-  - region,
-  - asset type,
-  - timeframe
-- Trend analysis across multiple financial indicators
-- Executive-style dashboard reporting
-
----
-
-# KEY INSIGHTS
-
-- Market relationships vary across regions and asset classes
-- Energy commodities demonstrate high volatility and strong market influence
-- Gold shows greater stability during periods of market uncertainty
-- Clear correlation patterns exist between major global financial markets
-- Certain commodities respond differently to economic events and market shifts
-- Interactive filtering improves comparative financial analysis
-
----
-
-# TECHNICAL APPROACH
-
-Financial data was cleaned, transformed, and analysed before visualisation in Power BI.
-
-The workflow included:
-- data preparation,
-- transformation,
-- aggregation,
-- analytical modelling,
-- dashboard visualisation.
-
-The project demonstrates the end-to-end business intelligence process from raw financial data to interactive reporting.
-
----
-
-# TOOLS USED
-
-- Power BI
-- Python
-- Google BigQuery
-- Google Sheets
-- Data modelling
-- Data visualisation
-- Financial analytics
-
----
-
-# DATA PIPELINE
-
-
-<p align="center">
-  <img src="images/data.png" width="900"/>
-</p>
-
----
-
-# DATASET
-
-The project combines global market and commodity datasets including:
-- stock market indices,
-- commodity pricing,
-- historical market performance,
-- volatility indicators,
-- asset trend data.
-
-The data was structured and transformed to support interactive dashboard reporting and financial analysis.
-
----
-
-# DASHBOARD METRICS
-
-The dashboard analyses:
-- market performance,
-- commodity trends,
-- asset volatility,
-- correlation patterns,
-- performance over time,
-- comparative market analysis.
-
----
-
-# REPOSITORY STRUCTURE
+## Repository contents
 
 ```text
-market-trends-performance-dashboard/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
+Market-trends-performance-dashboard/
 ├── dashboard/
-│   └── Market_Trends_Performance_Dashboard.pbix
-│
-├── sql/
-├── dax/
-├── images/
+│   └── Market_Analysis_Dashboard.pbix
+├── data/
+│   └── README.md
 ├── docs/
-│
+│   └── methodology.md
+├── images/
+├── python/
+│   └── market_analysis.py
+├── .gitignore
+├── LICENSE
 ├── README.md
-└── LICENSE
+└── requirements.txt
 ```
 
----
+## Analytical workflow
 
-# HOW TO USE THIS PROJECT
+1. Load historical market and commodity CSV files.
+2. Standardise dates and price fields.
+3. Combine each series into a date-indexed dataset.
+4. Align different trading calendars without using future information.
+5. Calculate daily returns, annualised returns and annualised volatility.
+6. Produce a correlation matrix and portfolio-ready outputs.
+7. Present the results through Power BI.
 
-1. Download the repository
-2. Open the `.pbix` dashboard file in Power BI Desktop
-3. Connect the dashboard to the dataset if required
-4. Explore dashboard visuals and interactive filters
-5. Review SQL and analytical documentation inside the repository
+See [the methodology](docs/methodology.md) for definitions, assumptions and limitations.
 
----
+## Findings from the supplied project data
 
-# LINKS
+After aligning the available source series, the reproducible workflow produced 3,239 dated observations across 40 stock-index and commodity series, covering 16 June 2014 to 4 October 2024.
 
-### GitHub Repository
-https://github.com/smlumpa/market-trends-performance-dashboard
+- The Dow Jones and S&P 500 daily returns had a correlation of **0.956**.
+- The Nasdaq Composite and S&P 500 daily returns had a correlation of **0.947**.
+- The CAC 40 and DAX daily returns had a correlation of **0.932**.
+- The BIST 100 had the highest arithmetic annualised mean return in the aligned dataset at **22.3%**.
+- WTI crude oil had the highest annualised volatility at **102.8%**, reflecting exceptional price behaviour during the period.
 
-### Live Power BI Dashboard  
-📊 [View Interactive Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMzc0OGFiNmUtNmQ0OS00YWYxLTg4MzUtYWViNjFmYzkwMWQzIiwidCI6ImVlZDg0YTBlLWM3YTQtNDM1ZC05ZWQ1LTU4ODQwODgyYmMyOSJ9&pageName=d3fbaee262c4ba3b1b43)
+These figures describe this dataset only. Returns are not currency-adjusted, the annualised mean is not a compound annual growth rate, and the results should not be interpreted as investment recommendations.
 
----
+## Run the Python analysis
 
-# AUTHOR
+The complete source downloads are not redistributed in this repository. Place legitimately obtained CSV files in two local directories and run:
+
+```bash
+python -m venv .venv
+python -m pip install -r requirements.txt
+python python/market_analysis.py \
+  --stock-dir "/path/to/Stock Market Prices" \
+  --commodity-dir "/path/to/Commodity Spot Prices" \
+  --output-dir "data/processed"
+```
+
+The script creates cleaned prices, daily returns, summary metrics, a correlation matrix and two chart images.
+
+## Data source and use
+
+The original historical price files were downloaded from Investing.com for an educational portfolio project. They are not included here. Users should obtain data directly from a source they are authorised to use and follow that provider's applicable terms.
+
+This analysis is for educational and portfolio purposes only. It is not investment advice, and historical performance does not predict future results.
+
+## Author
 
 **Sophia Lumpa**  
-Business Intelligence & Operations Analyst
+Business Intelligence & Operations Analyst  
+[Portfolio website](https://www.virtavis.com/)

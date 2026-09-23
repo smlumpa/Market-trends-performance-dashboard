@@ -1,1 +1,0 @@
--- Trend Analysis Queries
