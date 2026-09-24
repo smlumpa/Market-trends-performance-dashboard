@@ -1,6 +1,8 @@
 # Market Trends & Performance Dashboard
 
-An end-to-end portfolio project examining historical stock-market indices and commodity prices. The project combines Python data preparation and analysis with an interactive Power BI report.
+**Power BI · Google BigQuery · Python · Power Query · Market Analytics**
+
+An end-to-end portfolio project examining historical stock-market indices and commodity prices. It combines BigQuery-based analytical tables, Python analysis and an interactive Power BI dashboard.
 
 ![Dashboard preview](images/dashboard_screenshot.png)
 
@@ -11,20 +13,70 @@ An end-to-end portfolio project examining historical stock-market indices and co
 ## Business questions
 
 - How did major global stock indices perform over the period analysed?
-- Which markets and commodities produced the highest annualised returns?
+- Which markets and commodities produced the strongest average returns?
 - Which assets showed the greatest volatility?
-- How strongly were stock-market and commodity returns correlated?
-- How can an interactive dashboard make cross-market comparison easier?
+- How did performance vary by asset category and over time?
+- How did major geo-economic events coincide with market movements?
+- How can an interactive dashboard support cross-market comparison?
+
+## Verified Power BI model scope
+
+The model was verified from `Market Analysis Dashboard(1).vpax`, exported on 24 September 2026.
+
+| Model component | Verified value |
+|---|---:|
+| Stock-market series | 19 |
+| Commodity series | 19 |
+| Combined series | 38 |
+| Return dates | 4,380 |
+| Joined price rows | 4,381 |
+| Long-form stock-return rows | 83,220 |
+| Long-form commodity-return rows | 83,220 |
+| Combined long-form return rows | 166,440 |
+| Geo-economic events | 29 |
+
+The model also contains separate average-return and standard-deviation tables for the 19 stock-market series and 19 commodity series.
 
 ## Tools and techniques
 
-- Python: pandas, NumPy, Matplotlib and Seaborn
-- Power BI and data modelling
+- Google BigQuery for analytical storage and prepared return tables
+- Python with pandas, NumPy, Matplotlib and Seaborn
+- Power BI and Power Query
 - Data cleaning, reshaping and joining
-- Daily and annualised return calculations
-- Annualised volatility and correlation analysis
+- Return and volatility analysis
+- Long-form data preparation for interactive comparisons
+- Geo-economic event annotation
 - Interactive dashboard design
-- Google BigQuery in the original project workflow
+
+## Data pipeline
+
+```text
+Authorised source CSV files
+        ↓
+Python / analytical preparation
+        ↓
+Google BigQuery — Final schema
+        ↓
+Power Query transformations
+        ↓
+Power BI dashboard
+```
+
+The verified Power BI model connects directly to BigQuery tables in the `Final` schema. Two supporting Excel files provide geo-economic events and stock classifications.
+
+## BigQuery tables used by Power BI
+
+- `avg_return_commodities`
+- `avg_return_stock_market`
+- `commodities_return`
+- `row_commodities_return`
+- `row_commodities_stock_market_return`
+- `row_stock_market_returns`
+- `std_dev_commodities`
+- `std_dev_stock_market`
+- `stock_commodities_joined`
+- `stock_commodities_return_joined`
+- `stock_market_returns`
 
 ## Repository contents
 
@@ -47,29 +99,18 @@ Market-trends-performance-dashboard/
 
 ## Analytical workflow
 
-1. Load historical market and commodity CSV files.
+1. Load authorised historical market and commodity files.
 2. Standardise dates and price fields.
-3. Combine each series into a date-indexed dataset.
-4. Align different trading calendars without using future information.
-5. Calculate daily returns, annualised returns and annualised volatility.
-6. Produce a correlation matrix and portfolio-ready outputs.
-7. Present the results through Power BI.
+3. Combine the individual price series.
+4. Calculate and reshape market and commodity returns.
+5. Store prepared analytical tables in BigQuery.
+6. Connect Power BI to the BigQuery `Final` schema.
+7. Apply presentation transformations in Power Query.
+8. Compare returns, volatility, categories and events in the dashboard.
 
 See [the methodology](docs/methodology.md) for definitions, assumptions and limitations.
 
-## Findings from the supplied project data
-
-After aligning the available source series, the reproducible workflow produced 3,239 dated observations across 40 stock-index and commodity series, covering 16 June 2014 to 4 October 2024.
-
-- The Dow Jones and S&P 500 daily returns had a correlation of **0.956**.
-- The Nasdaq Composite and S&P 500 daily returns had a correlation of **0.947**.
-- The CAC 40 and DAX daily returns had a correlation of **0.932**.
-- The BIST 100 had the highest arithmetic annualised mean return in the aligned dataset at **22.3%**.
-- WTI crude oil had the highest annualised volatility at **102.8%**, reflecting exceptional price behaviour during the period.
-
-These figures describe this dataset only. Returns are not currency-adjusted, the annualised mean is not a compound annual growth rate, and the results should not be interpreted as investment recommendations.
-
-## Run the Python analysis
+## Run the local Python analysis
 
 The complete source downloads are not redistributed in this repository. Place legitimately obtained CSV files in two local directories and run:
 
@@ -82,7 +123,7 @@ python python/market_analysis.py \
   --output-dir "data/processed"
 ```
 
-The script creates cleaned prices, daily returns, summary metrics, a correlation matrix and two chart images.
+The local script creates cleaned prices, daily returns, summary metrics, a correlation matrix and chart images. Its output counts depend on the authorised source files supplied by the user; they should not be substituted for the VPAX-verified Power BI model counts above.
 
 ## Data source and use
 
